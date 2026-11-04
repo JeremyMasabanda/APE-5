@@ -2,7 +2,7 @@
 
 ## Práctica de Manejo de Archivos en Java
 
-*Ejercicio 1: Crear un fichero en Java*
+# Ejercicio 1: Crear un fichero en Java
 
 Enunciado: Desarrollar un programa en Java que permita crear un archivo de texto llamado curso.txt.
 
@@ -20,7 +20,7 @@ Mostrar el nombre del archivo utilizando el método getName().
 
 Utilizar una estructura try-catch para controlar posibles errores de E/S (Input/Output).
 
-*Ejercicio 2: Escribir información en un fichero*
+# Ejercicio 2: Escribir información en un fichero
 
 Enunciado: Desarrollar un programa en Java que permita ingresar un mensaje por teclado y almacenarlo en un archivo de texto existente llamado estudiantes.txt.
 
@@ -42,7 +42,7 @@ Mostrar un mensaje por consola indicando que la información se guardó correcta
 
 Nota: El archivo estudiantes.txt debe existir previamente para este ejercicio.
 
-*Ejercicio 3: Eliminar un fichero en Java*
+# Ejercicio 3: Eliminar un fichero en Java
 
 Enunciado: Desarrollar un programa en Java que permita eliminar el archivo de texto estudiantes.txt.
 
