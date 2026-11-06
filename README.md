@@ -120,3 +120,62 @@ Permitir registrar varios productos hasta que el usuario escriba fin.
 Guardar cada venta en el archivo sin eliminar los registros anteriores. 
 
 Al finalizar, guardar el total acumulado de las ventas realizadas. 
+
+## Ejercicios clase 3
+
+## Ejercicio 1: Exploración y Gestión de Metadatos con File
+
+Enunciado: Basándote en los conceptos de rutas y abstracción de la sesión, escribe un programa en Java que utilice la clase File (perteneciente al paquete java.io) para interactuar con la ruta "datos/prueba.txt". 
+
+Indicaciones Principales:
+
+Comprobación previa: Utiliza el método adecuado (exists()) para verificar si la ruta apunta a un recurso disponible en el disco.
+
+Creación controlada: Si el recurso no existe, intenta crearlo mediante el método correspondiente (createNewFile()). Como esta operación puede producir un error de E/S, debes gestionarlo obligatoriamente manejando la excepción IOException (mediante un bloque try-catch).
+
+Extracción de información: Tanto si el archivo ya existía como si se acaba de crear, utiliza los métodos de consulta para mostrar por consola el último nombre de la ruta (getName()) y la ruta completa o relativa con la que se construyó el objeto (getPath()).
+
+## Ejercicio 2: Escritura Estructurada por Líneas con BufferedWriter
+
+Enunciado: Tomando como referencia el flujo de datos desde la memoria RAM hasta el archivo en disco, desarrolla un programa en Java que cree un fichero de texto llamado "materias.txt". 
+
+Indicaciones Principales:
+
+Configurar un flujo de salida utilizando un objeto BufferedWriter enlazado con un FileWriter.
+
+Escribir un listado de cinco asignaturas de tu elección en el archivo.
+
+Emplear el método portable newLine() para asegurar que cada asignatura quede guardada estrictamente en una línea independiente.
+
+Liberar los recursos de forma correcta invocando el método de cierre (close()) y controlar cualquier error potencial de escritura mediante una excepción de tipo IOException.
+
+Verificación: Comprueba físicamente en la carpeta de tu proyecto que el archivo se generó correctamente y que mantiene una única asignatura por línea.
+
+## Ejercicio 3: Control del Modo de Apertura (Append vs Sobrescribir)
+
+Enunciado: A partir del archivo "materias.txt" generado en el ejercicio anterior, escribe un nuevo programa en Java que demuestre el comportamiento del segundo parámetro en el constructor de FileWriter
+
+Indicaciones Principales:
+
+Diseña el código de manera que abra el fichero existente configurando el FileWriter en modo de adición (append = true).
+
+Añade dos nuevas asignaturas al final del archivo utilizando nuevamente newLine() para no romper el formato de líneas.
+
+Asegúrate de cerrar el flujo con .close().
+
+Comprobación: Verifica que el contenido previo no se haya sobrescribido y que ahora el archivo conserve las cinco asignaturas originales junto con las dos nuevas incorporadas al final.
+
+## Ejercicio 4: Ciclo de Vida Completo y Borrado Seguro
+
+Enunciado: Diseña un script completo en Java que emule el recorrido guiado de gestión de ficheros visto en clase
+
+Instrucciones Principales:
+
+Construye un objeto File que represente la ruta "datos/temporal.txt".
+
+Consulta el estado del archivo mediante exists() y, si no se encuentra disponible, créalo de forma segura controlando la excepción IOException.
+
+Implementa una fase de validación en la que declares una variable de control booleana (por ejemplo, boolean confirmarBorrado = true;) para simular la solicitud de confirmación por parte del usuario antes de eliminar datos importantes.
+
+Utiliza el método delete() exclusivamente si dicha confirmación es verdadera, imprimiendo por consola un mensaje que refleje el resultado booleano de la operación de eliminación.
+
